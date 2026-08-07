@@ -5,6 +5,10 @@
 **Platform:** Farming Simulator 25
 **Multiplayer:** Fully supported
 
+<p align="center">
+  <img src="icon_autogrove.png" width="180" alt="Auto Grove mod icon — a stylised olive branch and grape vine inside a cyan ring, the RocklandUSA Gaming utility-category mark">
+</p>
+
 ### ⏳ Submitted to the GIANTS ModHub — awaiting approval
 
 *Auto Grove will be distributed exclusively through the official GIANTS ModHub. This page will be updated with the download link as soon as the mod is approved and live.*
@@ -19,12 +23,39 @@ Pick one of your farm's fields, choose grapes or olives, set the direction you w
 
 The rows follow the field boundary, including irregular and concave fields, and the mod tells you exactly how many rows, how many sections, and what it will cost before you commit to anything.
 
-<!-- SCREENSHOTS — drop files into screenshots/ and uncomment. See screenshots/README.md for the naming convention.
 <p align="center">
-  <img src="screenshots/screenshot0.png" width="800" alt="Auto Grove settings panel open on the GROVE tab, showing crop selection, row heading slider, direction with BEST marker, row and section counts, and the estimated cost">
+  <img src="screenshots/screenshot0.png" width="800" alt="Auto Grove settings panel open on the GROVE tab above an aerial view of a field: crop set to OLIVE, Plantable Now YES, a LAYOUT section with row heading 47 degrees and Direction NE marked BEST, native row and plant spacing, 28 rows, and a COST section showing 1064 sections at $35 per section for a total of $37,240">
 </p>
-<p align="center"><sub>Pick the field, pick the crop, set the heading — the cost is quoted before you commit.</sub></p>
--->
+<p align="center"><sub>Pick the field, pick the crop, set the heading — rows, sections and the exact cost are quoted before you commit to anything.</sub></p>
+
+<table align="center">
+  <tr>
+    <td align="center" width="50%">
+      <img src="screenshots/screenshot1.png" width="400" alt="Aerial view of a field part-planted with olive rows running diagonally across it, bare tilled soil still visible ahead of the rows; an AUTO GROVE progress bar at the top of the screen reads Planting 56 of 101"><br>
+      <sub>Rows go in paced to the engine, with an on-screen progress bar you can watch while you carry on farming.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="screenshots/screenshot2.png" width="400" alt="Ground-level view of a finished olive grove, straight evenly spaced rows running away to the horizon with farm buildings and a brick chimney in the distance"><br>
+      <sub>The finished grove — built from the game's own orchard placeables at native spacing.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="screenshots/screenshot3.png" width="400" alt="Blue New Holland grape harvester working between rows in a grove, with vanilla guidance steering lines running down the rows ahead of it"><br>
+      <sub>Vanilla guidance steering works in an Auto Grove grove with no extra setup.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="screenshots/screenshot4.png" width="400" alt="Auto Grove panel open on the FIELD tab while standing in an olive grove, showing field number 55, a field area of 1.01 hectares, and SET, REFRESH and DEMO buttons"><br>
+      <sub>The FIELD tab — pick a field, or just use the one you're standing in.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="screenshots/screenshot5.png" width="600" alt="The same field after demolition, tilled back to bare brown soil with no rows remaining; a notification reads Removed the olive grove and tilled the rows back to bare field"><br>
+      <sub>Changed your mind? One action removes the grove and tills the rows back to bare field.</sub>
+    </td>
+  </tr>
+</table>
 
 Everything is done through one in-game panel on **F6**. There are no console commands and nothing to edit in a text file.
 
@@ -53,11 +84,14 @@ Everything is done through one in-game panel on **F6**. There are no console com
 
 - **Demolish a grove in one action** — removes the whole grove and tills the rows back to bare field
 - **Two-tap confirmation** — the first tap arms it, the second performs it, so a stray click can never wipe a grove
+- **Hand-built groves too** — not just groves this mod planted
+- **Groves that cross field boundaries are trimmed, not destroyed** — only the rows standing on the selected field are removed, and the rows on neighbouring fields are left alone
 
 ### General
 
 - **Multiplayer safe** — fully supported on dedicated servers, listen servers, and in single-player
 - **Paced to the engine** — rows are fed to the game at a rate it can render, with an admin-adjustable build speed for lower-end machines
+- **On-screen progress** — a progress bar shows the job running whether or not the panel is open, so you can close it and carry on farming
 - **No console commands** — everything is in the F6 panel
 - **Zero dependencies** — works entirely standalone
 - **FSCore optional** — if [FSCore](https://fscore.gg) is installed, Auto Grove integrates with it automatically
@@ -97,9 +131,14 @@ Press **F6** to open Auto Grove. The panel has two tabs, plus a third for admins
 | **Direction** | Shows the current bearing. Carries a **(BEST)** marker when you're on the optimal angle, and becomes a one-tap **BEST** button when you aren't |
 | **Row Spacing** | Fixed at the game's native orchard spacing (3 m) |
 | **Plant Spacing** | `NATIVE` — set by the game's own orchard placeable |
-| **Rows** / **Sections** | What will be built |
-| **Cost** | Total price, in your farm's currency, before you commit |
+| **Rows** | How many rows will be built |
+| **Sections** | How many pole-to-pole spans in total |
+| **Cost Per Section** | The vanilla rate this is priced from — $25 grapes, $35 olives |
+| **Discount** | Only shown when a server has set one |
+| **Total Cost** | What the farm will actually pay |
 | **Plantable Now** | Whether the crop can be planted at the current time of year |
+
+The rows are grouped under **LAYOUT** and **COST** headings, so the price is auditable rather than a single number to take on trust: rate × sections, less any discount, equals total.
 
 Selecting a new field automatically snaps the heading to that field's best angle, so the default is always a sensible one.
 

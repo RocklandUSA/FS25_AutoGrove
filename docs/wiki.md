@@ -32,6 +32,10 @@
 
 Auto Grove plants an entire vineyard or olive grove on one of your fields in a single action.
 
+<p align="center">
+  <img src="../screenshots/screenshot0.png" width="800" alt="Auto Grove settings panel on the GROVE tab showing crop OLIVE, row heading 47 degrees, Direction NE marked BEST, 28 rows, 1064 sections at $35 each, total cost $37,240">
+</p>
+
 In the base game, building a vineyard means placing trellis sections one at a time in the construction screen. A medium field is several hundred sections. Auto Grove replaces that with: pick the field, pick the crop, set the direction, confirm the cost.
 
 ### What it builds
@@ -74,6 +78,7 @@ Three principles shaped the mod:
 | Native spacing | Row and plant spacing are read from the game's own orchard placeable at spawn time |
 | Automatic field clearing | Fruit, weeds, and stones removed and the ground tilled to cultivated soil before the first row |
 | Engine-paced building | Rows are fed to the game at a rate it can render, with an adjustable speed |
+| On-screen progress | A progress bar tracks the job whether or not the panel is open |
 
 ### Cost & permissions
 
@@ -90,6 +95,8 @@ Three principles shaped the mod:
 | Feature | Description |
 |---|---|
 | One-action demolition | Removes the entire grove from a field |
+| Hand-built groves | Removes groves you built yourself, not only ones this mod planted |
+| Cross-field trimming | A grove running onto other fields is trimmed back to the selected field, leaving the neighbours' rows standing |
 | Ground restoration | Tills the rows back to bare field |
 | Two-tap confirmation | The first tap arms it, the second performs it |
 
@@ -191,7 +198,9 @@ Where you set up what gets planted.
 | **Plant Spacing** | `NATIVE` | Set by the game's own orchard placeable |
 | **Rows** | Read-only | How many rows will be built |
 | **Sections** | Read-only | How many sections in total |
-| **Cost** | Read-only | The total price. Turns red with a warning if your farm can't afford it. |
+| **Cost Per Section** | Read-only | The vanilla rate — $25 grapes, $35 olives |
+| **Discount** | Read-only | Shown only when a server has set one |
+| **Total Cost** | Read-only | What the farm pays. Turns red with a warning if it can't afford it. |
 | **Plantable Now** | Read-only | Whether the crop can be planted at the current time of year |
 
 The **Direction** row is deliberately always present, whether or not you're on the best angle, so the layout never shifts under your cursor. The recommendation only appears as something to *act on* when there's actually something to do.
@@ -248,7 +257,13 @@ The first tap **arms** the button: it turns red and changes to *"Remove this gro
 
 ### What gets removed
 
-Everything the mod planted on that field, plus any other orchard placeables belonging to your farm inside the field boundary. The ground is then tilled back to bare, cultivated soil.
+Everything the mod planted on that field, plus any other orchard placeables belonging to your farm inside the field boundary — including groves you built by hand in the construction screen. The ground is then tilled back to bare, cultivated soil.
+
+### Groves that cross field boundaries
+
+One hand-built placeable often carries rows across several fields. Deleting it whole — which is the only way a placeable *can* be deleted — would destroy the rows standing on the neighbours too.
+
+Auto Grove will not do that. A grove that runs onto other fields is **trimmed** instead: only the sections standing on the field you selected are removed, one at a time, exactly as the game's own delete tool would. The rows on the neighbouring fields are left standing. This takes noticeably longer than removing a self-contained grove, and the progress bar shows it running.
 
 ### Why it's always offered
 
