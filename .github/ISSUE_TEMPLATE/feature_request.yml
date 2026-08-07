@@ -47,7 +47,7 @@ body:
     attributes:
       label: Design principles
       description: |
-        Feature requests are weighed against the project's design principles. Please confirm you've read them in [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+        Feature requests are weighed against the project's design principles. Please confirm you've read them in [CONTRIBUTING.md](https://github.com/RocklandUSA/FS25_AutoGrove/blob/main/CONTRIBUTING.md).
       options:
         - label: The result would still be indistinguishable from a hand-built grove
           required: false
