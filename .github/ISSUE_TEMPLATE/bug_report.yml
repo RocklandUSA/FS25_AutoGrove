@@ -1,0 +1,87 @@
+name: Bug Report
+description: Report something that isn't working the way the documentation says it should.
+title: "[Bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. The fields below are the minimum information needed to act on the report — please fill them all in.
+
+        **Before you file:** two behaviours are documented and expected rather than bugs — AI helpers refusing to work in a vineyard (a base-game limitation), and guidance lines running over the plants when using a vineyard *harvester* (which straddles the row by design). Both are explained in the README.
+  - type: input
+    id: mod_version
+    attributes:
+      label: Auto Grove version
+      description: Visible in the in-game mod menu.
+      placeholder: "1.0.0.0"
+    validations:
+      required: true
+  - type: input
+    id: game_version
+    attributes:
+      label: Farming Simulator 25 version
+      description: Bottom-left of the FS25 main menu.
+      placeholder: "1.18.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where does the bug happen?
+      multiple: true
+      options:
+        - Single-player
+        - Multiplayer (listen server / host)
+        - Multiplayer (dedicated server, as client)
+        - Multiplayer (dedicated server, server-side)
+    validations:
+      required: true
+  - type: input
+    id: map
+    attributes:
+      label: Map
+      description: Which map were you playing? Include the field number if the problem only happens on one field.
+      placeholder: "Riverbend Springs, field 12"
+    validations:
+      required: true
+  - type: dropdown
+    id: crop
+    attributes:
+      label: Which crop?
+      options:
+        - Grapes
+        - Olives
+        - Both
+        - Not crop-specific
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: A short numbered list — what did you do, what did you expect, what happened instead?
+      placeholder: |
+        1. Load any map in single-player
+        2. Press F6 and select field 12 on the FIELD tab
+        3. On the GROVE tab choose olives and set the heading to 90
+        4. Press PLANT
+        5. Expected: rows across the whole field. Actual: the middle third is missing.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log lines
+      description: |
+        Paste the `[AutoGrove]` lines from `Documents\My Games\FarmingSimulator2025\log.txt`. On a dedicated server, pull the server's log rather than your client's. These lines record the field clear, the placeable resolved, the row layout, the pacing, and the final charge — they usually identify the problem on their own.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: other_mods
+    attributes:
+      label: Other mods installed
+      description: If you suspect a conflict, list the other mods that were active. "Only Auto Grove" is a perfectly good answer and a very useful one.
+    validations:
+      required: false

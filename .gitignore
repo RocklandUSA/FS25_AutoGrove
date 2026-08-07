@@ -1,0 +1,46 @@
+# This repo is documentation-only — no code or build artifacts should ever
+# enter version control. The block list below is defensive.
+
+# Compiled / build artifacts
+*.zip
+*.gar
+*.dll
+*.exe
+*.pdb
+*.obj
+
+# FS25 mod source / asset extensions (must never be committed here)
+*.lua
+*.i3d
+*.shapes
+*.anim
+*.dds
+*.ogg
+*.wav
+*.gls
+*.ogv
+*.gdm
+*.grle
+*.cache
+
+# Backup / temp files
+*.bak
+*.bak_*
+*.tmp
+*.swp
+*~
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local-only test output
+log*.txt
+testResult_*
+
+# Python (if any tooling lands here later)
+__pycache__/
+*.pyc
+.venv/

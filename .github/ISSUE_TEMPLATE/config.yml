@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Mod source code
+    url: https://www.farming-simulator.com/mods.php
+    about: Auto Grove is distributed exclusively through the GIANTS ModHub. The source code is not available in this repository.
+  - name: Full Wiki
+    url: https://github.com/RocklandUSA/FS25_AutoGrove/blob/main/docs/wiki.md
+    about: Comprehensive reference for the panel, costs, permissions, multiplayer, guidance steering, and FAQ.
+  - name: RocklandUSA Gaming Discord
+    url: https://discord.gg/ahWDGanNP5
+    about: Questions, help, and general chat about our mods.

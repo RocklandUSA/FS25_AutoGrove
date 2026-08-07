@@ -1,0 +1,57 @@
+name: Feature Request
+description: Suggest something Auto Grove should be able to do.
+title: "[Feature] "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the use case before the implementation — *what* you want to do, *why* you currently can't, and *who* it would help. That gives us the best chance of solving the actual problem, which is sometimes not the solution you had in mind.
+  - type: textarea
+    id: use_case
+    attributes:
+      label: What are you trying to do?
+      description: Describe the situation in the game, not the code change.
+      placeholder: "I run a role-play server where a farm can order a grove as a service, and I want the order to be placed by one player but paid for by another farm."
+    validations:
+      required: true
+  - type: textarea
+    id: blocker
+    attributes:
+      label: Why can't you do it today?
+      description: What specifically stops you — a missing option, a permission, a limit?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to see?
+      description: Optional. If you have a specific idea for how it should work, describe it here.
+    validations:
+      required: false
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Who would this help?
+      multiple: true
+      options:
+        - Single-player players
+        - Multiplayer players
+        - Dedicated server admins
+        - Role-play / life-sim servers
+        - Other mod authors
+    validations:
+      required: true
+  - type: checkboxes
+    id: principles
+    attributes:
+      label: Design principles
+      description: |
+        Feature requests are weighed against the project's design principles. Please confirm you've read them in [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+      options:
+        - label: The result would still be indistinguishable from a hand-built grove
+          required: false
+        - label: This wouldn't require the server to trust the client
+          required: false
+        - label: This belongs in the F6 panel rather than a console command
+          required: false
