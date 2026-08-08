@@ -115,7 +115,6 @@ Three principles shaped the mod:
 | Dedicated server | Fully supported |
 | Shared F6 panel | The same settings key across all RocklandUSA Gaming mods |
 | Dependencies | None |
-| FSCore | Optional — integrates automatically if installed |
 
 ---
 
@@ -531,9 +530,6 @@ Not in this version. A job covers the whole field polygon.
 **Does it work in single-player?**
 Yes, fully. Single-player, listen server, and dedicated server are all supported.
 
-**Do I need FSCore?**
-No. Auto Grove is completely standalone. If FSCore is installed it integrates automatically, but nothing is required.
-
 **Are there console commands?**
 No, by design. Everything is in the F6 panel.
 
@@ -563,7 +559,6 @@ No. You can only plant on fields owned by your own farm, and only with Farm Mana
 - Planting-season toggle
 - Full multiplayer support, server-authoritative throughout
 - Shared **F6** settings panel across all RocklandUSA Gaming mods
-- Optional FSCore integration
 
 ---
 

@@ -34,7 +34,7 @@
 - **Game:** Farming Simulator 25 (Giants Engine descVersion 111)
 - **Platform:** PC only — not available on console
 - **Multiplayer:** Fully supported (also runs in singleplayer)
-- **Dependency:** None — `FS25_aaa_FSCore` is optional and integrates automatically if installed
+- **Dependency:** None — works entirely standalone
 - **Permissions:** Farm Manager rights required to plant or demolish
 - **Distribution:** Official GIANTS ModHub only — source is closed
 
@@ -124,7 +124,6 @@ Everything is done through one in-game panel on **F6**. There are no console com
 - **On-screen progress** — a progress bar shows the job running whether or not the panel is open, so you can close it and carry on farming
 - **No console commands** — everything is in the F6 panel
 - **Zero dependencies** — works entirely standalone
-- **FSCore optional** — if [FSCore](https://fscore.gg) is installed, Auto Grove integrates with it automatically
 
 ---
 
@@ -275,7 +274,6 @@ Auto Grove cannot change this, and no mod can grant it without replacing the gam
 | **Multiplayer** | Fully supported |
 | **Dedicated server** | Fully supported |
 | **Dependencies** | None |
-| **FSCore** | Optional — integrates automatically if present |
 | **Conflicts** | None known |
 
 Auto Grove works on any map with the standard orchard placeables, which includes all stock maps. Grapes and olives are fence-style placeables in Farming Simulator 25 rather than trees, and Auto Grove uses the game's own versions of both.
@@ -305,9 +303,6 @@ Because it's priced at exactly the vanilla rate — $25 per grape section, $35 p
 **Some rows are invisible but I can't walk through them.**
 Lower the **Build Speed** in the ADMIN tab. This happens when rows are fed to the engine faster than it can render them, which is more likely on lower-end machines. Demolish the grove and replant at a slower speed.
 
-**Do I need FSCore?**
-No. Auto Grove is completely standalone. If FSCore happens to be installed it integrates automatically, but nothing is required.
-
 ---
 
 ## Changelog
@@ -328,7 +323,6 @@ No. Auto Grove is completely standalone. If FSCore happens to be installed it in
 - Planting-season toggle
 - Full multiplayer support, server-authoritative throughout
 - Shared **F6** settings panel across all RocklandUSA Gaming mods
-- Optional FSCore integration
 
 ---
 
