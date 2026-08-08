@@ -1,14 +1,30 @@
-# FS25_AutoGrove — Auto Grove
-
-**Version:** 1.0.0.0
-
 <p align="center">
   <img src="icon_autogrove.png" width="180" alt="Auto Grove mod icon — a stylised olive branch and grape vine inside a cyan ring, the RocklandUSA Gaming utility-category mark">
+</p>
+
+<h1 align="center">Auto Grove</h1>
+
+<p align="center"><strong>Version 1.0.0.0</strong></p>
+
+<p align="center">
+  <strong>Plant a whole vineyard or olive grove in one action — evenly spaced, aligned to your heading, and fitted to the shape of the field.</strong><br>
+  Built from the game's own orchard placeables, so the result is exactly what you would have built by hand.
+</p>
+
+<p align="center">
+  <a href="https://rocklandusa.com/"><strong>rocklandusa.com</strong></a> ·
+  <a href="https://www.youtube.com/@rocklandusa">YouTube</a> ·
+  <a href="https://www.twitch.tv/rocklandusa">Twitch</a> ·
+  <a href="https://www.facebook.com/rocklandusa/">Facebook</a> ·
+  <a href="https://discord.gg/ahWDGanNP5">Discord</a> ·
+  <a href="https://github.com/RocklandUSA/FS25_AutoGrove/issues">Issues</a> ·
+  <a href="https://github.com/RocklandUSA/FS25_AutoGrove/discussions">Discussions</a>
 </p>
 
 ### ⏳ Submitted to the GIANTS ModHub — awaiting approval
 
 *Auto Grove will be distributed exclusively through the official GIANTS ModHub. This page will be updated with the download link as soon as the mod is approved and live.*
+
 
 ---
 
