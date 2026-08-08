@@ -168,7 +168,7 @@ To confirm from the log, open `Documents\My Games\FarmingSimulator2025\log.txt` 
 
 Press **F6** to open Auto Grove.
 
-**F6 is the shared settings key across all RocklandUSA Gaming mods.** If you have more than one of our mods installed, F6 opens a directory and you pick which one to configure. With only Auto Grove installed, F6 opens Auto Grove directly. The key is rebindable in **Options → Controls**.
+**F6 is the shared settings key across all RocklandUSA Gaming mods.** If you have more than one of our mods installed, F6 opens a directory and you pick which one to configure. With only Auto Grove installed, F6 opens Auto Grove directly.
 
 The panel has two tabs, plus a third that appears only for admins and the host.
 

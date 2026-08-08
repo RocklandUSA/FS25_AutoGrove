@@ -126,7 +126,7 @@ Everything is done through one in-game panel on **F6**. There are no console com
 
 | Action | Default | Notes |
 |---|---|---|
-| Open the Auto Grove panel | **F6** | Rebindable in Options → Controls |
+| Open the Auto Grove panel | **F6** | Shared across all RocklandUSA Gaming mods |
 
 **F6 is the shared settings key across all RocklandUSA Gaming mods.** If you have more than one of our mods installed, F6 opens a directory listing them and you pick the one you want. With only Auto Grove installed, F6 opens Auto Grove directly.
 
