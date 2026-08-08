@@ -1,9 +1,6 @@
 # FS25_AutoGrove — Auto Grove
 
 **Version:** 1.0.0.0
-**Author:** RocklandUSA Gaming
-**Platform:** Farming Simulator 25
-**Multiplayer:** Fully supported
 
 <p align="center">
   <img src="icon_autogrove.png" width="180" alt="Auto Grove mod icon — a stylised olive branch and grape vine inside a cyan ring, the RocklandUSA Gaming utility-category mark">
@@ -14,6 +11,16 @@
 *Auto Grove will be distributed exclusively through the official GIANTS ModHub. This page will be updated with the download link as soon as the mod is approved and live.*
 
 ---
+
+## Quick facts
+
+- **Author:** RocklandUSA Gaming
+- **Game:** Farming Simulator 25 (Giants Engine descVersion 111)
+- **Platform:** PC only — not available on console
+- **Multiplayer:** Fully supported (also runs in singleplayer)
+- **Dependency:** None — `FS25_aaa_FSCore` is optional and integrates automatically if installed
+- **Permissions:** Farm Manager rights required to plant or demolish
+- **Distribution:** Official GIANTS ModHub only — source is closed
 
 ## Overview
 
