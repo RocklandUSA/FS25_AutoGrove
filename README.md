@@ -47,16 +47,11 @@ Pick one of your farm's fields, choose grapes or olives, set the direction you w
 The rows follow the field boundary, including irregular and concave fields, and the mod tells you exactly how many rows, how many sections, and what it will cost before you commit to anything.
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=eRqH_ftpRVk">
-    <img src="https://img.youtube.com/vi/eRqH_ftpRVk/maxresdefault.jpg" width="800" alt="Auto Grove trailer on YouTube — a whole vineyard and olive grove planted in one action">
-  </a>
-</p>
-<p align="center"><sub>▶ <a href="https://www.youtube.com/watch?v=eRqH_ftpRVk"><strong>Watch the Auto Grove trailer</strong></a></sub></p>
-
-<p align="center">
   <img src="screenshots/screenshot0.png" width="800" alt="Auto Grove settings panel open on the GROVE tab above an aerial view of a field: crop set to OLIVE, Plantable Now YES, a LAYOUT section with row heading 47 degrees and Direction NE marked BEST, native row and plant spacing, 28 rows, and a COST section showing 1064 sections at $35 per section for a total of $37,240">
 </p>
 <p align="center"><sub>Pick the field, pick the crop, set the heading — rows, sections and the exact cost are quoted before you commit to anything.</sub></p>
+
+<p align="center">▶ <a href="https://www.youtube.com/watch?v=eRqH_ftpRVk"><strong>Watch the Auto Grove trailer</strong></a></p>
 
 <table align="center">
   <tr>

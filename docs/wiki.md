@@ -33,15 +33,10 @@
 Auto Grove plants an entire vineyard or olive grove on one of your fields in a single action.
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=eRqH_ftpRVk">
-    <img src="https://img.youtube.com/vi/eRqH_ftpRVk/maxresdefault.jpg" width="800" alt="Auto Grove trailer on YouTube">
-  </a>
-</p>
-<p align="center"><sub>▶ <a href="https://www.youtube.com/watch?v=eRqH_ftpRVk"><strong>Watch the Auto Grove trailer</strong></a></sub></p>
-
-<p align="center">
   <img src="../screenshots/screenshot0.png" width="800" alt="Auto Grove settings panel on the GROVE tab showing crop OLIVE, row heading 47 degrees, Direction NE marked BEST, 28 rows, 1064 sections at $35 each, total cost $37,240">
 </p>
+
+<p align="center">▶ <a href="https://www.youtube.com/watch?v=eRqH_ftpRVk"><strong>Watch the Auto Grove trailer</strong></a></p>
 
 In the base game, building a vineyard means placing trellis sections one at a time in the construction screen. A medium field is several hundred sections. Auto Grove replaces that with: pick the field, pick the crop, set the direction, confirm the cost.
 
