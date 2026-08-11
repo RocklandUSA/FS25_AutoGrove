@@ -20,7 +20,7 @@
 9. [Permissions](#section-9--permissions)
 10. [Server Settings](#section-10--server-settings)
 11. [Multiplayer](#section-11--multiplayer)
-12. [Guidance Steering & AI Helpers](#section-12--guidance-steering--ai-helpers)
+12. [Guidance Steering, AI Helpers & Courseplay](#section-12--guidance-steering-ai-helpers--courseplay)
 13. [Troubleshooting](#section-13--troubleshooting)
 14. [FAQ](#section-14--faq)
 15. [Changelog](#section-15--changelog)
@@ -51,7 +51,7 @@ This matters beyond convenience: because the result is native, everything that w
 - It does not invent new crops, new placeables, or new farming mechanics.
 - It does not bypass the game's rules on where things can be placed.
 - It does not make groves cheaper than building them by hand (unless a server admin chooses to).
-- It does not enable AI helpers in vineyards — see [Section 12](#section-12--guidance-steering--ai-helpers).
+- It does not enable AI helpers in vineyards — see [Section 12](#section-12--guidance-steering-ai-helpers--courseplay).
 
 ### Design philosophy
 
@@ -193,7 +193,8 @@ Where you set up what gets planted.
 | Row | Control | What it does |
 |---|---|---|
 | **Crop** | Cycle | Grapes or olives |
-| **Row Heading** | Slider | The compass direction rows run, 0–359° in 5° steps |
+| **Courseplay Mode** | Cycle | `YES` (default) locks the row heading to 5° steps, matching the increments Courseplay generates courses in. `NO` frees it to 1° steps and lets the best-angle search find the absolute optimum. See [Section 12](#section-12--guidance-steering-ai-helpers--courseplay). |
+| **Row Heading** | Slider | The compass direction rows run, 0–359°. Steps by 5° with Courseplay Mode on, by 1° with it off. |
 | **Direction** | Info / `BEST` | Shows the current bearing as a compass label. When you're on the optimal angle it displays **(BEST)**; when you aren't, it becomes a one-tap **BEST** button that snaps you there. |
 | **Row Spacing** | Read-only | The game's native orchard spacing (3 m on stock maps) |
 | **Plant Spacing** | `NATIVE` | Set by the game's own orchard placeable |
@@ -205,6 +206,15 @@ Where you set up what gets planted.
 | **Plantable Now** | Read-only | Whether the crop can be planted at the current time of year |
 
 The **Direction** row is deliberately always present, whether or not you're on the best angle, so the layout never shifts under your cursor. The recommendation only appears as something to *act on* when there's actually something to do.
+
+When Courseplay Mode is on **and** the free angle would genuinely do better on this particular field, an extra line appears beneath **Rows**:
+
+```
+Rows                                        17
+15 rows at 119 deg without Courseplay mode
+```
+
+That line is the whole point of the toggle. Staying on the 5° grid sometimes costs you nothing and occasionally costs a row or two, and it depends entirely on the shape of the field in front of you — so the panel measures it rather than asking you to guess. On most fields the two modes pick the same angle and the line never appears.
 
 ### ADMIN tab
 
@@ -241,6 +251,8 @@ Planting runs in stages, and each is visible in the log:
 The **BEST** recommendation minimises the number of rows needed to cover the field, which generally means running rows along the field's longest axis. Fewer, longer rows means fewer turns when you come to work the grove.
 
 You are free to ignore it. If you want rows running a particular way for aesthetic reasons, or to line up with a neighbouring field, set the heading yourself — the mod will lay the grove out exactly as asked.
+
+The recommendation is calculated for whichever mode you're in. With **Courseplay Mode** on it only ever suggests multiples of 5°; with it off it also searches the degrees either side of that winner for a better answer. Toggling the mode recalculates it.
 
 ### Limits
 
@@ -392,7 +404,7 @@ The mod must be installed on **both** the server and every client. After uploadi
 
 ---
 
-## Section 12 — Guidance Steering & AI Helpers
+## Section 12 — Guidance Steering, AI Helpers & Courseplay
 
 Because Auto Grove builds groves from the game's own orchard placeables, a finished grove is indistinguishable from a hand-built one to the rest of the game. That cuts both ways.
 
@@ -436,6 +448,38 @@ If you're using a sprayer and the lines still run over the plants, check that it
 Farming Simulator 25 generates the vineyard course perfectly well, then refuses to let a hired worker drive it, stopping the job with its own built-in "vineyard not supported" message. The game ships a dedicated error message for exactly this case — it is a deliberate design decision by the developers, not an oversight or a bug.
 
 This applies to **any** vineyard, including one you build entirely by hand in the construction screen. Auto Grove changes nothing about it in either direction.
+
+### Courseplay
+
+Courseplay is the usual answer to the limitation above, and Auto Grove is built to work with it.
+
+**Courseplay generates its courses in 5° increments.** That is the fact everything here follows from. A grove planted at 91° cannot be lined up with, because the nearest course Courseplay can produce is 90° or 95° — a degree or more off. Over a 300 m row that error walks the machine steadily off the plants, and there is no setting on either side that recovers it.
+
+#### Courseplay Mode
+
+The first row on the GROVE tab, **on by default**. With it on, the row heading is held to multiples of 5 at every point it could otherwise drift:
+
+| Where | What it does |
+|---|---|
+| Best-angle suggestion | Only ever proposes multiples of 5 |
+| `<` `>` arrows | Step by 5 |
+| Dragging the slider | Snaps to the nearest 5 |
+| Toggling the mode | Re-snaps whatever heading you were on |
+| **The server** | Re-checks and snaps before a single plant is placed |
+
+That last one is the one that matters. The server is the authority, so even a modified client cannot plant an off-grid grove while the mode is on.
+
+#### Turning it off
+
+Switching to `NO` frees the heading to 1° steps and lets the best-angle search examine the degrees either side of the 5° winner. On some field shapes that finds a genuinely better answer — a row or two fewer to cover the same ground, which is a real saving in both money and driving time.
+
+The trade is that Courseplay will not be able to follow those rows properly. Turn it off if you drive your groves yourself.
+
+You do not have to guess which way to go: when the two modes disagree, the panel says so under **Rows** before you commit, and on most fields they don't disagree at all.
+
+#### If a course only covers part of the field
+
+Replant the grove. Builds from before 1.0.0.0 could leave the field ground partially cleared, and anything that detects a field by reading the ground — Courseplay included — then sees only the surviving fragment. Demolishing and replanting the grove restores the field.
 
 No mod can lift this restriction without replacing the game's field-work AI wholesale, including writing row-aware turning logic from scratch. Your vine rows are physical objects with collision; an AI that misjudges a row-end turn drives through them.
 
@@ -510,8 +554,14 @@ It's cleared. Fruit, weeds, and stones are removed and the ground is tilled to c
 **Can I undo a grove?**
 Yes — **Demolish This Grove** on the FIELD tab. It removes the grove and tills the rows back to bare field. Two taps to confirm.
 
-**Will it work with CoursePlay and other field mods?**
-The grove is built from the game's own orchard placeables at native spacing, so it's indistinguishable from a hand-built grove to any other mod.
+**Will it work with Courseplay and other field mods?**
+Yes. The grove is built from the game's own orchard placeables at native spacing, so it's indistinguishable from a hand-built grove to any other mod. For Courseplay specifically there's one more thing: it generates courses in 5° increments, so **Courseplay Mode** (on by default) keeps your row heading on that grid. See [Section 12](#courseplay).
+
+**Do I have to leave Courseplay Mode on?**
+No. Leave it on if you use Courseplay — it costs you at most a row or two on some field shapes, and often nothing at all. Turn it off if you drive the grove yourself and want the mathematically best layout. The panel tells you what the difference is on your field before you commit.
+
+**I turned Courseplay Mode off. Will my old groves change?**
+No. The setting only applies to the next grove you plant. Existing groves are placeables in the world and are untouched by it.
 
 **Why can't I change the row spacing?**
 Because the orchard placeable dictates it. The game overwrites whatever spacing is requested with its own `snapDistance` and `panelLength`, so an editable slider would be showing you a number the game ignores.
@@ -529,7 +579,7 @@ Yes, fully. Single-player, listen server, and dedicated server are all supported
 No, by design. Everything is in the F6 panel.
 
 **Why do AI helpers refuse to work my vineyard?**
-Because Farming Simulator 25 doesn't support AI helpers in vineyards at all — see [Section 12](#section-12--guidance-steering--ai-helpers). This applies to hand-built vineyards too.
+Because Farming Simulator 25 doesn't support AI helpers in vineyards at all — see [Section 12](#section-12--guidance-steering-ai-helpers--courseplay). This applies to hand-built vineyards too.
 
 **Can I use this on someone else's farm in multiplayer?**
 No. You can only plant on fields owned by your own farm, and only with Farm Manager rights on that farm.
@@ -542,6 +592,7 @@ No. You can only plant on fields owned by your own farm, and only with Farm Mana
 
 - Whole-field vineyard and olive grove planting on any field your farm owns
 - Row heading in degrees with a live compass readout and a best-angle recommendation
+- Courseplay Mode, on by default, holding the row heading to the 5° grid Courseplay generates courses in, enforced server-side
 - Live preview of row count, section count, and total cost before committing
 - Boundary-following row layout, including irregular and concave fields
 - Native orchard spacing read from the game's own placeables at spawn time

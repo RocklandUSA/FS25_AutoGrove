@@ -151,7 +151,8 @@ Press **F6** to open Auto Grove. The panel has two tabs, plus a third for admins
 | Row | What it does |
 |---|---|
 | **Crop** | Grapes or olives |
-| **Row Heading** | The direction rows run, 0–359° in 5° steps |
+| **Courseplay Mode** | `YES` (default) locks the row heading to 5° steps so a generated course lines up with your rows. `NO` frees it to 1° steps and picks the absolute best angle for the field |
+| **Row Heading** | The direction rows run, 0–359°, in 5° steps with Courseplay Mode on and 1° steps with it off |
 | **Direction** | Shows the current bearing. Carries a **(BEST)** marker when you're on the optimal angle, and becomes a one-tap **BEST** button when you aren't |
 | **Row Spacing** | Fixed at the game's native orchard spacing (3 m) |
 | **Plant Spacing** | `NATIVE` — set by the game's own orchard placeable |
@@ -164,7 +165,9 @@ Press **F6** to open Auto Grove. The panel has two tabs, plus a third for admins
 
 The rows are grouped under **LAYOUT** and **COST** headings, so the price is auditable rather than a single number to take on trust: rate × sections, less any discount, equals total.
 
-Selecting a new field automatically snaps the heading to that field's best angle, so the default is always a sensible one.
+Selecting a new field automatically snaps the heading to that field's best angle, so the default is always a sensible one. The best angle is calculated for whichever mode you're in.
+
+When the two modes would disagree, the **Rows** row tells you what the 5° grid costs on *that* field — for example `15 rows at 119° without Courseplay mode` beneath a count of `17`. On most fields they agree and the line never appears, so the choice only asks for your attention when it actually matters.
 
 ### ADMIN tab
 
@@ -269,9 +272,18 @@ Auto Grove cannot change this, and no mod can grant it without replacing the gam
 | **Multiplayer** | Fully supported |
 | **Dedicated server** | Fully supported |
 | **Dependencies** | None |
+| **Courseplay** | Supported — see below |
 | **Conflicts** | None known |
 
 Auto Grove works on any map with the standard orchard placeables, which includes all stock maps. Grapes and olives are fence-style placeables in Farming Simulator 25 rather than trees, and Auto Grove uses the game's own versions of both.
+
+### Courseplay
+
+Courseplay generates its courses in **5° increments**. A grove planted at 91° therefore can't be lined up with — the closest course it can produce is a degree off, and that error accumulates across the length of a row.
+
+**Courseplay Mode**, the first row on the GROVE tab, is on by default and keeps every heading on that 5° grid: the best-angle suggestion, the `<` `>` arrows, dragging the slider, and the server-side check that runs before anything is planted. There is no path that produces an off-grid grove while it's on.
+
+Turning it **off** frees the heading to 1° steps and lets the mod search for the absolute best angle. That's the right choice if you drive the rows yourself, since a better angle can genuinely mean fewer rows to cover the same field. The panel shows you the difference before you commit.
 
 ---
 
@@ -289,8 +301,8 @@ It's cleared first. The field is stripped of fruit, weeds, and stones, and tille
 **Can I undo it?**
 Yes — the **Demolish This Grove** button on the FIELD tab removes the grove and tills the rows back to bare field. It takes two taps to confirm.
 
-**Will it work with CoursePlay?**
-The grove is built from the game's own orchard placeables at native spacing, so it's indistinguishable from a hand-built one to any other mod.
+**Will it work with Courseplay?**
+Yes. The grove is built from the game's own orchard placeables at native spacing, so it's indistinguishable from a hand-built one to any other mod — and **Courseplay Mode** (on by default) keeps the row heading on the 5° grid Courseplay generates its courses in, so the course lines up with the rows. See [Compatibility](#courseplay). If you'd rather have the mathematically best layout and don't need Courseplay, switch it off.
 
 **Why is a grove more expensive than I expected?**
 Because it's priced at exactly the vanilla rate — $25 per grape section, $35 per olive section — and a full field holds a lot of sections. The GROVE tab quotes the total before you commit. Server admins can apply a discount.
@@ -306,6 +318,7 @@ Lower the **Build Speed** in the ADMIN tab. This happens when rows are fed to th
 
 - Whole-field vineyard and olive grove planting on any field your farm owns
 - Row heading in degrees with a live compass readout and a best-angle recommendation
+- Courseplay Mode, on by default, keeping row headings on the 5° grid Courseplay generates courses in
 - Live preview of row count, section count, and total cost before committing
 - Boundary-following row layout, including irregular and concave fields
 - Native orchard spacing read from the game's own placeables
