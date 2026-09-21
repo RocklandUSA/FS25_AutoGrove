@@ -3,7 +3,7 @@
 **Version:** 1.0.0.0
 **Author:** RocklandUSA Gaming
 **Platform:** Farming Simulator 25
-**Distribution:** Official GIANTS ModHub (pending approval)
+**Distribution:** Official GIANTS ModHub
 
 ---
 
@@ -30,19 +30,19 @@
 
 ## Section 1 — Overview
 
-Auto Grove plants an entire vineyard or olive grove on one of your fields in a single action.
+Auto Grove plants an entire vineyard, olive grove or coffee grove on one of your fields in a single action — and builds complete rice fields the same way.
 
 <p align="center">
-  <img src="../screenshots/screenshot0.png" width="800" alt="Auto Grove settings panel on the GROVE tab showing crop OLIVE, row heading 47 degrees, Direction NE marked BEST, 28 rows, 1064 sections at $35 each, total cost $37,240">
+  <img src="../screenshots/screenshot2.jpg" width="800" alt="A four-panel collage labelled OLIVES, GRAPES, RICE FIELD and COFFEE, each showing an Auto Grove planting: rows of olive trees, a trellised vineyard, a leveled rice field with its water pump, and a coffee grove in fruit">
 </p>
 
-<p align="center">▶ <a href="https://www.youtube.com/watch?v=eRqH_ftpRVk"><strong>Watch the Auto Grove trailer</strong></a></p>
+<p align="center">▶ <a href="https://youtu.be/kVNvaQNuOQM"><strong>Watch the Auto Grove trailer</strong></a></p>
 
-In the base game, building a vineyard means placing trellis sections one at a time in the construction screen. A medium field is several hundred sections. Auto Grove replaces that with: pick the field, pick the crop, set the direction, confirm the cost.
+In the base game, building a vineyard means placing trellis sections one at a time in the construction screen. A medium field is several hundred sections. Auto Grove replaces that with: pick the field, pick the crop, set the direction, confirm the cost. Rice works differently — choose rice and the whole field is leveled, ridged and given a water pump for you.
 
 ### What it builds
 
-The grove is made from the game's **own orchard placeables** — the same grape and olive objects the construction screen places — at the game's own native spacing. Nothing about the finished grove is custom. It is exactly what you would have built by hand, laid out in seconds instead of an hour.
+Groves are made from the game's **own orchard placeables** — the same grape, olive and coffee objects the construction screen places — at the game's own native spacing. Rice fields are built from the game's own rice-field placeable, shaped to your field. Nothing about the finished result is custom. It is exactly what you would have built by hand, laid out in seconds instead of an hour.
 
 This matters beyond convenience: because the result is native, everything that works with a hand-built vineyard works here too. Harvesting, pruning, spraying, guidance steering, other mods reading the field — none of them can tell the difference.
 
@@ -71,13 +71,17 @@ Three principles shaped the mod:
 
 | Feature | Description |
 |---|---|
-| Whole-field planting | Grapes or olives across any field your farm owns, in one action |
+| Whole-field planting | Grapes, olives, coffee groves and complete rice fields across any field your farm owns, in one action (coffee and rice appear on maps that have them) |
+| Rice fields built for you | The whole paddy is shaped from your field — ground leveled, ridge raised, and the water pump placed automatically |
+| Merged & extended fields | Fields plowed together or grown with the ground tools are detected from the actual ground and planted as one area |
 | Row heading | Set the direction rows run, 0–359° in 5° steps, with a live compass readout |
 | Best-heading recommendation | The mod works out the most efficient angle for the field's shape and offers it as a one-tap **BEST** button |
+| Adjustable row spacing | From the crop's native spacing up to 10 m for wider alleys and bigger equipment |
+| Seasonal calendar | Planting is gated by the game's plantable period, exactly like vanilla sowing |
 | Live preview | Row count, section count, and total cost update as you change the heading |
 | Boundary-following layout | Rows fit the actual field shape, including irregular and concave fields |
 | Concave field handling | A row crossing a notch is split into separate spans rather than bridged across the gap |
-| Native spacing | Row and plant spacing are read from the game's own orchard placeable at spawn time |
+| Native spacing | Plant spacing along a row is read from the game's own orchard placeable at spawn time |
 | Automatic field clearing | Fruit, weeds, and stones removed and the ground tilled to cultivated soil before the first row |
 | Engine-paced building | Rows are fed to the game at a rate it can render, with an adjustable speed |
 | On-screen progress | A progress bar tracks the job whether or not the panel is open |
@@ -86,7 +90,7 @@ Three principles shaped the mod:
 
 | Feature | Description |
 |---|---|
-| Vanilla pricing | $25 per grape section, $35 per olive section — the same as the construction screen |
+| Vanilla pricing | $25 per grape section, $35 per olive section, and the map's own price for coffee and rice — the same as the construction screen |
 | Charged on completion | The farm pays for what actually went in; a cancelled or failed job costs nothing |
 | Affordability check | The panel refuses to start a job the farm can't pay for, and says so |
 | Server discount | Admins can set 0–100% off, applied server-wide |
@@ -121,15 +125,17 @@ Three principles shaped the mod:
 | **Game version** | Current retail version |
 | **DLC** | None required |
 | **Other mods** | None required |
-| **Map** | Any map with the standard orchard placeables — effectively all maps, including all stock maps |
+| **Map** | Any map with the standard orchard placeables — effectively all maps, including all stock maps. Coffee appears on maps with a coffee placeable (such as Recanto da Alvorada); rice on maps that sell a rice field |
 | **Permissions** | Farm Manager rights to plant or demolish |
 | **Owned land** | At least one field owned by your farm |
 
-### A note on grapes and olives
+### A note on grapes, olives and coffee
 
-In Farming Simulator 25, grapes and olives are **fence-style placeables**, not trees. They live at `data/placeables/orchards/` and are built as pole-to-pole panel sections, the same way a fence is built.
+In Farming Simulator 25, grapes, olives and coffee are **fence-style placeables**, not trees. They live at `data/placeables/orchards/` (coffee ships with the map that provides it) and are built as pole-to-pole panel sections, the same way a fence is built.
 
-This is worth knowing because it explains several things about the mod: why groves are priced per *section*, why row spacing isn't adjustable (the placeable dictates it), and why the game builds them progressively rather than instantly.
+This is worth knowing because it explains several things about the mod: why groves are priced per *section*, why the *plant* spacing along a row is fixed by the placeable (the spacing between whole *rows* is what Auto Grove lets you adjust), and why the game builds them progressively rather than instantly.
+
+Rice is different: it is not a fence placeable but a **rice-field placeable** that terraforms the ground — which is why choosing rice levels the field, raises the ridge and drops the water pump instead of laying rows.
 
 ---
 
@@ -192,15 +198,14 @@ Where you set up what gets planted.
 
 | Row | Control | What it does |
 |---|---|---|
-| **Crop** | Cycle | Grapes or olives |
+| **Crop** | Cycle | Grapes, olives, coffee, or rice fields (coffee and rice appear on maps that have them) |
 | **Courseplay Mode** | Cycle | `YES` (default) locks the row heading to 5° steps, matching the increments Courseplay generates courses in. `NO` frees it to 1° steps and lets the best-angle search find the absolute optimum. See [Section 12](#section-12--guidance-steering-ai-helpers--courseplay). |
 | **Row Heading** | Slider | The compass direction rows run, 0–359°. Steps by 5° with Courseplay Mode on, by 1° with it off. |
 | **Direction** | Info / `BEST` | Shows the current bearing as a compass label. When you're on the optimal angle it displays **(BEST)**; when you aren't, it becomes a one-tap **BEST** button that snaps you there. |
-| **Row Spacing** | Read-only | The game's native orchard spacing (3 m on stock maps) |
-| **Plant Spacing** | `NATIVE` | Set by the game's own orchard placeable |
+| **Row Spacing** | Slider | Adjustable, from the crop's native spacing (3 m for grapes) up to 10 m for wider alleys and bigger equipment. Resets to native when you change crop. |
 | **Rows** | Read-only | How many rows will be built |
 | **Sections** | Read-only | How many sections in total |
-| **Cost Per Section** | Read-only | The vanilla rate — $25 grapes, $35 olives |
+| **Cost Per Section** | Read-only | The vanilla rate — $25 grapes, $35 olives, map price for coffee and rice |
 | **Discount** | Read-only | Shown only when a server has set one |
 | **Total Cost** | Read-only | What the farm pays. Turns red with a warning if it can't afford it. |
 | **Plantable Now** | Read-only | Whether the crop can be planted at the current time of year |
@@ -229,7 +234,7 @@ Visible only to admins and the host. See [Section 10](#section-10--server-settin
 1. Press **F6**.
 2. On the **FIELD** tab, select the field — either cycle to it, or stand in it and press `SET`.
 3. Switch to the **GROVE** tab.
-4. Choose **grapes** or **olives**.
+4. Choose your **crop** — grapes, olives, coffee, or rice.
 5. Set the **Row Heading**, or press **BEST** to use the recommended angle.
 6. Check the **Rows**, **Sections**, and **Cost** readouts.
 7. Confirm.
@@ -292,8 +297,10 @@ The button is shown even when the mod has no local record of having planted ther
 |---|---|
 | Grapes | $25 |
 | Olives | $35 |
+| Coffee | Map price (the map's own coffee placeable) |
+| Rice field | The map's rice-field store price |
 
-These are the vanilla construction-screen rates. A grove ordered through Auto Grove costs exactly what the same grove costs built by hand.
+These are the vanilla construction-screen rates. A grove ordered through Auto Grove costs exactly what the same grove costs built by hand. Coffee and rice are priced by whatever the host map sets for them.
 
 ### What a "section" is
 
@@ -344,7 +351,7 @@ The **ADMIN** tab is visible to admins and the host. Settings are stored on the 
 | Setting | Default | Range | Description |
 |---|---|---|---|
 | **Cost Discount** | 0% | 0–100 | Percentage off the vanilla grove price |
-| **Respect Planting Season** | On | On / Off | When on, grapes can only be planted during the game's plantable period. Turn off to allow planting year-round. |
+| **Respect Planting Season** | On | On / Off | When on, a crop can only be planted during the game's plantable period for it. Turn off to allow planting year-round. |
 | **Build Speed** | NORMAL | FAST / NORMAL / SLOW / VERY SLOW | How gently rows are fed to the engine |
 
 ### Build Speed in detail
@@ -507,7 +514,7 @@ Check, in order:
 
 1. **Do you have Farm Manager rights?** Farm hands cannot plant.
 2. **Can your farm afford it?** The Cost row turns red if not.
-3. **Is the crop plantable now?** If **Respect Planting Season** is on, grapes are restricted to the game's plantable period. An admin can turn this off.
+3. **Is the crop plantable now?** If **Respect Planting Season** is on, the crop is restricted to the game's plantable period for it. An admin can turn this off.
 4. **Is a job already running on that field?** Only one at a time.
 
 ### Some rows are invisible but block movement
@@ -543,7 +550,10 @@ On a dedicated server, pull the **server's** log rather than your client's — t
 ## Section 14 — FAQ
 
 **Does this work on modded maps?**
-Yes, on any map that ships the standard orchard placeables — effectively all of them, since the mod uses the base-game grape and olive placeables rather than map-specific ones.
+Yes, on any map that ships the standard orchard placeables — effectively all of them, since the mod uses the base-game grape and olive placeables rather than map-specific ones. Coffee and rice are the exception: they appear only on maps that actually provide a coffee placeable or sell a rice field, and stay hidden everywhere else.
+
+**Which maps have coffee and rice?**
+Coffee shows up on maps that ship a coffee placeable — for example Recanto da Alvorada. Rice fields build on maps that sell the base-game rice-field placeable. On a map without them, the crop simply doesn't appear in the list, and the other crops are unaffected.
 
 **Can I plant on a field I don't own?**
 No. Only owned fields are listed, and the server re-checks ownership before acting.
@@ -563,8 +573,8 @@ No. Leave it on if you use Courseplay — it costs you at most a row or two on s
 **I turned Courseplay Mode off. Will my old groves change?**
 No. The setting only applies to the next grove you plant. Existing groves are placeables in the world and are untouched by it.
 
-**Why can't I change the row spacing?**
-Because the orchard placeable dictates it. The game overwrites whatever spacing is requested with its own `snapDistance` and `panelLength`, so an editable slider would be showing you a number the game ignores.
+**Can I change the row spacing?**
+Yes — the **Row Spacing** slider on the GROVE tab adjusts the gap between whole rows, from the crop's native spacing up to 10 m, for wider alleys and bigger equipment. It never goes narrower than native (the equipment is built for native rows) and resets to native when you change crop. What's *fixed* is the *plant* spacing **along** a row — the placeable's own `snapDistance` and `panelLength` dictate that.
 
 **Why is it so expensive?**
 It's priced at exactly the vanilla rate. A full field is several hundred sections, and always was — the construction screen simply charged you one placement at a time. Server admins can apply a discount.
@@ -590,19 +600,23 @@ No. You can only plant on fields owned by your own farm, and only with Farm Mana
 
 ### 1.0.0.0 — Initial public release
 
-- Whole-field vineyard and olive grove planting on any field your farm owns
+- Whole-field planting on any field your farm owns: **grapes, olives, coffee** (on maps that grow it, such as Recanto da Alvorada) and **rice fields** (on maps that sell them)
+- Rice fields built from the field's real shape — ground leveled, ridge raised and water pump placed automatically
+- Combined and extended fields detected from the actual ground: plow two fields together, or grow a field with the ground tools, and the whole combined area is planted
+- Adjustable row spacing, from the crop's standard spacing up to 10 m for wider alleys and bigger equipment
 - Row heading in degrees with a live compass readout and a best-angle recommendation
 - Courseplay Mode, on by default, holding the row heading to the 5° grid Courseplay generates courses in, enforced server-side
+- Planting follows the game's seasonal calendar, exactly like vanilla sowing
 - Live preview of row count, section count, and total cost before committing
 - Boundary-following row layout, including irregular and concave fields
 - Native orchard spacing read from the game's own placeables at spawn time
 - Automatic field clearing to cultivated ground before planting
-- Vanilla pricing, charged on completion for what was actually placed
+- Vanilla pricing — $25 per grape section, $35 per olive section, map prices for coffee and rice — charged on completion for what was actually placed
 - Server-set cost discount, 0–100%
 - Farm Manager permission requirement for planting and demolition
-- One-action grove demolition with two-tap confirmation, tilling the field back to bare soil
+- One-action grove or rice-field demolition with two-tap confirmation, tilling the field back to a clean cultivated field
+- Groves that run onto a neighbouring field are trimmed back rather than destroyed
 - Admin-adjustable build speed for lower-end systems
-- Planting-season toggle
 - Full multiplayer support, server-authoritative throughout
 - Shared **F6** settings panel across all RocklandUSA Gaming mods
 
