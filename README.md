@@ -55,6 +55,11 @@ The rows follow the field boundary, including irregular and concave fields, and 
 </p>
 <p align="center"><sub>Pick the field, pick the crop, set the heading — rows, sections and the exact cost are quoted before you commit to anything.</sub></p>
 
+<p align="center">
+  <a href="https://youtu.be/kVNvaQNuOQM">
+    <img src="https://img.youtube.com/vi/kVNvaQNuOQM/maxresdefault.jpg" width="800" alt="Watch the Auto Grove trailer on YouTube — a whole vineyard planted in one action">
+  </a>
+</p>
 <p align="center">▶ <a href="https://youtu.be/kVNvaQNuOQM"><strong>Watch the Auto Grove trailer</strong></a></p>
 
 <table align="center">
