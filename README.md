@@ -7,7 +7,7 @@
 <p align="center"><strong>Version 1.0.0.0</strong></p>
 
 <p align="center">
-  <strong>Plant a whole vineyard or olive grove in one action — evenly spaced, aligned to your heading, and fitted to the shape of the field.</strong><br>
+  <strong>Plant a whole vineyard, olive or coffee grove in one action — and build complete rice fields the same way. Evenly spaced, aligned to your heading, and fitted to the shape of the field.</strong><br>
   Built from the game's own orchard placeables, so the result is exactly what you would have built by hand.
 </p>
 
@@ -21,9 +21,13 @@
   <a href="https://github.com/RocklandUSA/FS25_AutoGrove/discussions">Discussions</a>
 </p>
 
-### ⏳ Submitted to the GIANTS ModHub — awaiting approval
+### ✅ Available now on the official GIANTS ModHub
 
-*Auto Grove will be distributed exclusively through the official GIANTS ModHub. This page will be updated with the download link as soon as the mod is approved and live.*
+<p align="center">
+  <a href="{{MODHUB_URL}}"><strong>⬇&nbsp; Download Auto Grove on the GIANTS ModHub</strong></a>
+</p>
+
+*Auto Grove is distributed exclusively through the official GIANTS ModHub. Open the in-game ModHub in Farming Simulator 25 and search for **Auto Grove**, or download it from the link above.*
 
 
 ---
@@ -40,18 +44,18 @@
 
 ## Overview
 
-Auto Grove plants an entire vineyard or olive grove in a single action.
+Auto Grove plants an entire vineyard, olive grove or coffee grove in a single action — and builds complete rice fields the same way.
 
-Pick one of your farm's fields, choose grapes or olives, set the direction you want the rows to run, and the whole grove is laid out for you — evenly spaced, aligned to your heading, and fitted to the actual shape of the field. No placing trellis sections one at a time for forty minutes.
+Pick one of your farm's fields, choose your crop, set the direction you want the rows to run, and the whole grove is laid out for you — evenly spaced, aligned to your heading, and fitted to the actual shape of the field. No placing trellis sections one at a time for forty minutes. Choose rice, and the whole rice field is built from your field's real shape — ground leveled, ridge raised and water pump placed automatically.
 
-The rows follow the field boundary, including irregular and concave fields, and the mod tells you exactly how many rows, how many sections, and what it will cost before you commit to anything.
+The rows follow the field boundary, including irregular and concave fields, and the mod tells you exactly how many rows, how many sections, and what it will cost before you commit to anything. Coffee grows on maps that grow it (such as Recanto da Alvorada); rice fields build on maps that sell them.
 
 <p align="center">
   <img src="screenshots/screenshot0.png" width="800" alt="Auto Grove settings panel open on the GROVE tab above an aerial view of a field: crop set to OLIVE, Plantable Now YES, a LAYOUT section with row heading 47 degrees and Direction NE marked BEST, native row and plant spacing, 28 rows, and a COST section showing 1064 sections at $35 per section for a total of $37,240">
 </p>
 <p align="center"><sub>Pick the field, pick the crop, set the heading — rows, sections and the exact cost are quoted before you commit to anything.</sub></p>
 
-<p align="center">▶ <a href="https://www.youtube.com/watch?v=eRqH_ftpRVk"><strong>Watch the Auto Grove trailer</strong></a></p>
+<p align="center">▶ <a href="https://youtu.be/kVNvaQNuOQM"><strong>Watch the Auto Grove trailer</strong></a></p>
 
 <table align="center">
   <tr>
@@ -218,7 +222,7 @@ Auto Grove paces itself to that rate. The default (**NORMAL**) is verified good 
 
 Auto Grove is distributed exclusively through the official **GIANTS ModHub**.
 
-1. Once approved, open the in-game Mod Hub menu in Farming Simulator 25, search for **Auto Grove**, and subscribe — or download the mod zip from the ModHub page and place it (do not extract) into your mods folder at `Documents\My Games\FarmingSimulator2025\mods\`.
+1. Open the in-game ModHub menu in Farming Simulator 25, search for **Auto Grove**, and subscribe — or download the mod zip from the [ModHub page]({{MODHUB_URL}}) and place it (do not extract) into your mods folder at `Documents\My Games\FarmingSimulator2025\mods\`.
 2. Launch the game and enable the mod in the mod menu.
 3. Press **F6** in-game to open the panel.
 
@@ -268,7 +272,7 @@ Auto Grove cannot change this, and no mod can grant it without replacing the gam
 | | |
 |---|---|
 | **Game** | Farming Simulator 25 |
-| **Distribution** | Official GIANTS ModHub (pending approval) |
+| **Distribution** | [Official GIANTS ModHub]({{MODHUB_URL}}) |
 | **Multiplayer** | Fully supported |
 | **Dedicated server** | Fully supported |
 | **Dependencies** | None |
@@ -316,19 +320,24 @@ Lower the **Build Speed** in the ADMIN tab. This happens when rows are fed to th
 
 ### 1.0.0.0 — Initial public release
 
-- Whole-field vineyard and olive grove planting on any field your farm owns
+- Whole-field planting on any field your farm owns: **grapes, olives, coffee** (on maps that grow it, such as Recanto da Alvorada) and **rice fields** (on maps that sell them)
+- Rice fields built from the field's real shape — ground leveled, ridge raised and water pump placed automatically
+- Combined and extended fields detected from the actual ground: plow two fields together, or grow a field with the ground tools, and the whole combined area is planted
+- Adjustable row spacing, from the crop's standard spacing up to 10 m for wider alleys and bigger equipment
 - Row heading in degrees with a live compass readout and a best-angle recommendation
-- Courseplay Mode, on by default, keeping row headings on the 5° grid Courseplay generates courses in
+- Courseplay Mode, on by default, keeping row headings on the 5° grid Courseplay generates courses in — switch it off for the absolute best angle, with the difference shown before you commit
+- Planting follows the game's seasonal calendar, exactly like vanilla sowing
 - Live preview of row count, section count, and total cost before committing
 - Boundary-following row layout, including irregular and concave fields
 - Native orchard spacing read from the game's own placeables
 - Automatic field clearing to cultivated ground before planting
-- Vanilla pricing, charged on completion for what was actually placed
+- Vanilla pricing — $25 per grape section, $35 per olive section, map prices for coffee and rice — charged on completion for what was actually placed
 - Server-set cost discount, 0–100%
 - Farm Manager permission requirement
-- One-action grove demolition with two-tap confirmation, tilling the field back to bare soil
+- One-action grove or rice-field demolition with two-tap confirmation, tilling the field back to a clean cultivated field
+- Groves that run onto a neighbouring field are trimmed back rather than destroyed
 - Admin-adjustable build speed for lower-end systems
-- Planting-season toggle
+- On-screen progress while a grove is built, so you can close the panel and carry on farming
 - Full multiplayer support, server-authoritative throughout
 - Shared **F6** settings panel across all RocklandUSA Gaming mods
 
