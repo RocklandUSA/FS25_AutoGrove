@@ -24,7 +24,7 @@
 ### ✅ Available now on the official GIANTS ModHub
 
 <p align="center">
-  <a href="{{MODHUB_URL}}"><strong>⬇&nbsp; Download Auto Grove on the GIANTS ModHub</strong></a>
+  <a href="https://www.farming-simulator.com/mod.php?mod_id=371695&title=fs2025"><strong>⬇&nbsp; Download Auto Grove on the GIANTS ModHub</strong></a>
 </p>
 
 *Auto Grove is distributed exclusively through the official GIANTS ModHub. Open the in-game ModHub in Farming Simulator 25 and search for **Auto Grove**, or download it from the link above.*
@@ -234,7 +234,7 @@ Auto Grove paces itself to that rate. The default (**NORMAL**) is verified good 
 
 Auto Grove is distributed exclusively through the official **GIANTS ModHub**.
 
-1. Open the in-game ModHub menu in Farming Simulator 25, search for **Auto Grove**, and subscribe — or download the mod zip from the [ModHub page]({{MODHUB_URL}}) and place it (do not extract) into your mods folder at `Documents\My Games\FarmingSimulator2025\mods\`.
+1. Open the in-game ModHub menu in Farming Simulator 25, search for **Auto Grove**, and subscribe — or download the mod zip from the [ModHub page](https://www.farming-simulator.com/mod.php?mod_id=371695&title=fs2025) and place it (do not extract) into your mods folder at `Documents\My Games\FarmingSimulator2025\mods\`.
 2. Launch the game and enable the mod in the mod menu.
 3. Press **F6** in-game to open the panel.
 
@@ -284,7 +284,7 @@ Auto Grove cannot change this, and no mod can grant it without replacing the gam
 | | |
 |---|---|
 | **Game** | Farming Simulator 25 |
-| **Distribution** | [Official GIANTS ModHub]({{MODHUB_URL}}) |
+| **Distribution** | [Official GIANTS ModHub](https://www.farming-simulator.com/mod.php?mod_id=371695&title=fs2025) |
 | **Multiplayer** | Fully supported |
 | **Dedicated server** | Fully supported |
 | **Dependencies** | None |
