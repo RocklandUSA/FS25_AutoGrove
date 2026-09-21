@@ -51,42 +51,43 @@ Pick one of your farm's fields, choose your crop, set the direction you want the
 The rows follow the field boundary, including irregular and concave fields, and the mod tells you exactly how many rows, how many sections, and what it will cost before you commit to anything. Coffee grows on maps that grow it (such as Recanto da Alvorada); rice fields build on maps that sell them.
 
 <p align="center">
-  <img src="screenshots/screenshot0.png" width="800" alt="Auto Grove settings panel open on the GROVE tab above an aerial view of a field: crop set to OLIVE, Plantable Now YES, a LAYOUT section with row heading 47 degrees and Direction NE marked BEST, native row and plant spacing, 28 rows, and a COST section showing 1064 sections at $35 per section for a total of $37,240">
+  <img src="screenshots/screenshot2.jpg" width="800" alt="A four-panel collage labelled OLIVES, GRAPES, RICE FIELD and COFFEE, each showing an Auto Grove planting: rows of olive trees, a trellised vineyard, a leveled rice field with its water pump, and a coffee grove in fruit">
 </p>
-<p align="center"><sub>Pick the field, pick the crop, set the heading — rows, sections and the exact cost are quoted before you commit to anything.</sub></p>
+<p align="center"><sub>One mod, four crops — olive and grape rows, coffee groves, and full rice fields, each laid out to the shape of your field.</sub></p>
 
 <p align="center">
   <a href="https://youtu.be/kVNvaQNuOQM">
-    <img src="https://img.youtube.com/vi/kVNvaQNuOQM/maxresdefault.jpg" width="800" alt="Watch the Auto Grove trailer on YouTube — a whole vineyard planted in one action">
+    <img src="https://img.youtube.com/vi/kVNvaQNuOQM/maxresdefault.jpg" width="800" alt="Watch the Auto Grove trailer on YouTube — a whole vineyard, olive or coffee grove planted in one action">
   </a>
 </p>
 <p align="center">▶ <a href="https://youtu.be/kVNvaQNuOQM"><strong>Watch the Auto Grove trailer</strong></a></p>
 
+<p align="center">
+  <img src="screenshots/screenshot1.jpg" width="800" alt="Auto Grove settings panel open on the GROVE tab above an olive grove: crop set to OLIVE, Plantable (Seasonal Growth) YES, a LAYOUT section with Courseplay Mode YES, Row Heading 0 degrees, Direction N marked BEST, Row Spacing 3.0 m and 29 rows, and a COST section showing 1069 sections at $35 per section for a total of $37,415">
+</p>
+<p align="center"><sub>Pick the field, pick the crop, set the heading — rows, sections and the exact cost are quoted before you commit to anything.</sub></p>
+
 <table align="center">
   <tr>
     <td align="center" width="50%">
-      <img src="screenshots/screenshot1.png" width="400" alt="Aerial view of a field part-planted with olive rows running diagonally across it, bare tilled soil still visible ahead of the rows; an AUTO GROVE progress bar at the top of the screen reads Planting 56 of 101"><br>
+      <img src="screenshots/screenshot0.jpg" width="400" alt="Aerial view of a large field with olive rows being planted diagonally across it, bare tilled soil ahead of the rows; an AUTO GROVE progress bar at the top reads Planting 66 / 123"><br>
       <sub>Rows go in paced to the engine, with an on-screen progress bar you can watch while you carry on farming.</sub>
     </td>
     <td align="center" width="50%">
-      <img src="screenshots/screenshot2.png" width="400" alt="Ground-level view of a finished olive grove, straight evenly spaced rows running away to the horizon with farm buildings and a brick chimney in the distance"><br>
-      <sub>The finished grove — built from the game's own orchard placeables at native spacing.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <img src="screenshots/screenshot3.png" width="400" alt="Blue New Holland grape harvester working between rows in a grove, with vanilla guidance steering lines running down the rows ahead of it"><br>
+      <img src="screenshots/screenshot3.jpg" width="400" alt="A blue New Holland grape harvester straddling a vine row in a grove, with vanilla guidance steering lines running down the rows ahead of it"><br>
       <sub>Vanilla guidance steering works in an Auto Grove grove with no extra setup.</sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="screenshots/screenshot4.png" width="400" alt="Auto Grove panel open on the FIELD tab while standing in an olive grove, showing field number 55, a field area of 1.01 hectares, and SET, REFRESH and DEMO buttons"><br>
-      <sub>The FIELD tab — pick a field, or just use the one you're standing in.</sub>
     </td>
   </tr>
   <tr>
     <td align="center" colspan="2">
-      <img src="screenshots/screenshot5.png" width="600" alt="The same field after demolition, tilled back to bare brown soil with no rows remaining; a notification reads Removed the olive grove and tilled the rows back to bare field"><br>
-      <sub>Changed your mind? One action removes the grove and tills the rows back to bare field.</sub>
+      <img src="screenshots/screenshot4.jpg" width="800" alt="Before-and-after of one-click grove demolition titled SINGLE CLICK GROVE DEMOLITION: on the left the Auto Grove FIELD tab with Demolish This Grove / DEMO highlighted in red over an olive grove, on the right the same field tilled back to bare soil"><br>
+      <sub>Changed your mind? One click on DEMO removes the grove and tills the rows back to a clean field.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="screenshots/screenshot5.jpg" width="800" alt="Auto Grove panel on the ADMIN tab titled MULTIPLAYER SERVER ADMIN CONTROLS, over a vineyard: Server settings with Grove Cost Discount at 0 percent (100% of the vanilla price) and Build Speed NORMAL, noted as saved on the server and applied to everyone"><br>
+      <sub>Server admins set the cost discount and build speed — saved on the server, applied to everyone.</sub>
     </td>
   </tr>
 </table>
@@ -99,12 +100,17 @@ Everything is done through one in-game panel on **F6**. There are no console com
 
 ### Planting
 
-- **Whole-field planting in one action** — grapes or olives, laid out across any field your farm owns
+- **Whole-field planting in one action** — grapes, olives, coffee groves, and complete rice fields, laid out across any field your farm owns (coffee on maps that grow it, such as Recanto da Alvorada; rice fields on maps that sell them)
+- **Rice fields built for you** — the whole paddy is shaped from your field: ground leveled, ridge raised, and the water pump placed automatically
 - **Set the row direction in degrees** — a heading slider with a live compass readout, so rows run exactly the way you want them
 - **Best-heading recommendation** — Auto Grove works out the most efficient angle for the field's shape and offers it as a one-tap **BEST** button
+- **Courseplay Mode** — keeps the row heading on the 5° grid Courseplay generates courses in; switch it off for the absolute best angle, with the difference shown before you commit
+- **Adjustable row spacing** — from the crop's standard spacing up to 10 m for wider alleys and bigger equipment
+- **Merged and extended fields are detected from the ground** — plow two fields together, or grow a field with the ground tools, and the whole combined area is planted
 - **Live preview before you commit** — row count, section count, and total cost update as you change the heading
 - **Follows the field boundary** — including irregular and concave fields, where a row crossing a notch is split into separate spans rather than bridged
 - **Native spacing** — rows and plant spacing are read from the game's own orchard placeables, so the finished grove is identical to one built by hand
+- **Follows the seasonal calendar** — planting is gated by season exactly like vanilla sowing
 - **Automatic field clearing** — the previous crop, weeds, and stones are stripped and the ground is tilled to cultivated soil before the first row goes in
 
 ### Cost & permissions
@@ -159,15 +165,14 @@ Press **F6** to open Auto Grove. The panel has two tabs, plus a third for admins
 
 | Row | What it does |
 |---|---|
-| **Crop** | Grapes or olives |
+| **Crop** | Grapes, olives, coffee, or rice fields (coffee and rice appear on maps that have them) |
 | **Courseplay Mode** | `YES` (default) locks the row heading to 5° steps so a generated course lines up with your rows. `NO` frees it to 1° steps and picks the absolute best angle for the field |
 | **Row Heading** | The direction rows run, 0–359°, in 5° steps with Courseplay Mode on and 1° steps with it off |
 | **Direction** | Shows the current bearing. Carries a **(BEST)** marker when you're on the optimal angle, and becomes a one-tap **BEST** button when you aren't |
-| **Row Spacing** | Fixed at the game's native orchard spacing (3 m) |
-| **Plant Spacing** | `NATIVE` — set by the game's own orchard placeable |
+| **Row Spacing** | Adjustable, from the crop's native spacing (3 m for grapes) up to 10 m for wider alleys and bigger equipment |
 | **Rows** | How many rows will be built |
 | **Sections** | How many pole-to-pole spans in total |
-| **Cost Per Section** | The vanilla rate this is priced from — $25 grapes, $35 olives |
+| **Cost Per Section** | The vanilla rate this is priced from — $25 grapes, $35 olives, map price for coffee and rice |
 | **Discount** | Only shown when a server has set one |
 | **Total Cost** | What the farm will actually pay |
 | **Plantable Now** | Whether the crop can be planted at the current time of year |
@@ -185,7 +190,7 @@ Visible only to admins and the host. Settings are saved on the server and apply 
 | Setting | Default | Description |
 |---|---|---|
 | **Cost Discount** | 0% | Percentage off the vanilla grove price, 0–100 |
-| **Respect Planting Season** | On | When on, grapes can only be planted during the game's plantable period |
+| **Respect Planting Season** | On | When on, a crop can only be planted during the game's plantable period for it |
 | **Build Speed** | NORMAL | How gently rows are fed to the engine — FAST, NORMAL, SLOW, or VERY SLOW |
 
 ---
@@ -198,8 +203,10 @@ Auto Grove charges exactly what the game charges for placing the same sections b
 |---|---|
 | Grapes | $25 |
 | Olives | $35 |
+| Coffee | Map price (the map's own coffee placeable) |
+| Rice field | The map's rice-field store price |
 
-A *section* is one pole-to-pole span of the orchard placeable — 3 metres on stock maps. The total is quoted in the GROVE tab before you commit, and the farm is only charged once planting completes, for the sections that actually went in.
+A *section* is one pole-to-pole span of the orchard placeable — 3 metres on stock maps. Coffee and rice are priced by whatever the host map sets for them. The total is quoted in the GROVE tab before you commit, and the farm is only charged once planting completes, for the sections that actually went in.
 
 If your farm can't afford the grove, the panel says so and the job won't start.
 
@@ -284,7 +291,7 @@ Auto Grove cannot change this, and no mod can grant it without replacing the gam
 | **Courseplay** | Supported — see below |
 | **Conflicts** | None known |
 
-Auto Grove works on any map with the standard orchard placeables, which includes all stock maps. Grapes and olives are fence-style placeables in Farming Simulator 25 rather than trees, and Auto Grove uses the game's own versions of both.
+Auto Grove works on any map with the standard orchard placeables, which includes all stock maps. Grapes and olives are fence-style placeables in Farming Simulator 25 rather than trees, and Auto Grove uses the game's own versions of both. Coffee groves appear as a crop on maps that ship a coffee placeable (such as Recanto da Alvorada), and rice fields on maps that sell the rice-field placeable — on maps without them, those crops simply don't show in the list.
 
 ### Courseplay
 
@@ -299,7 +306,7 @@ Turning it **off** frees the heading to 1° steps and lets the mod search for th
 ## Frequently Asked Questions
 
 **Does this work on modded maps?**
-Yes, on any map that ships the standard orchard placeables — which is effectively all of them, since the mod uses the base-game grape and olive placeables rather than map-specific ones.
+Yes, on any map that ships the standard orchard placeables — which is effectively all of them, since the mod uses the base-game grape and olive placeables rather than map-specific ones. Coffee and rice are the exception: they appear only on maps that actually provide a coffee placeable or sell a rice field, and stay hidden everywhere else.
 
 **Can I plant on a field I don't own?**
 No. Auto Grove only lists fields your farm owns, and the server re-checks ownership before doing anything.
@@ -314,7 +321,7 @@ Yes — the **Demolish This Grove** button on the FIELD tab removes the grove an
 Yes. The grove is built from the game's own orchard placeables at native spacing, so it's indistinguishable from a hand-built one to any other mod — and **Courseplay Mode** (on by default) keeps the row heading on the 5° grid Courseplay generates its courses in, so the course lines up with the rows. See [Compatibility](#courseplay). If you'd rather have the mathematically best layout and don't need Courseplay, switch it off.
 
 **Why is a grove more expensive than I expected?**
-Because it's priced at exactly the vanilla rate — $25 per grape section, $35 per olive section — and a full field holds a lot of sections. The GROVE tab quotes the total before you commit. Server admins can apply a discount.
+Because it's priced at exactly the vanilla rate — $25 per grape section, $35 per olive section, and the map's own price for coffee and rice — and a full field holds a lot of sections. The GROVE tab quotes the total before you commit. Server admins can apply a discount.
 
 **Some rows are invisible but I can't walk through them.**
 Lower the **Build Speed** in the ADMIN tab. This happens when rows are fed to the engine faster than it can render them, which is more likely on lower-end machines. Demolish the grove and replant at a slower speed.
